@@ -7,8 +7,8 @@
 function priceOfStarbucksDrink() {
   // We need to declare variables to store the price, size and tax of the selected drink
   let price = 0
-  let size = document.getElementById("size-select").value
-  let drink = document.getElementById("drink-select").value
+  let size = document.getElementById("calculate price").value
+  let drink = document.getElementById("answer").value
   let tax = 0.13 // assuming a tax rate of 13%
 
   // Calculate the price of the selected drink based on size and type
@@ -29,9 +29,6 @@ function priceOfStarbucksDrink() {
 
   // Add the cost of the size to the drink price
   switch (size) {
-    case "Tall":
-      price += 0.5
-      break
     case "Grande":
       price += 1
       break
@@ -52,5 +49,5 @@ function priceOfStarbucksDrink() {
 
 function myButtonClicked() {
   // Call the function to calculate and output the price of the selected drink
-  priceOfStarbucksDrink()
+  document.getElementById("price - Of - Starbucks - Drink").value
 }
