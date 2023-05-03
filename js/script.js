@@ -34,15 +34,15 @@ function calculateThePriceOfTheDrink() {
   }
 
   // prossces
-subtotal = price + price
-tax = subtotal * taxrate
-total = subtotal + tax
+  subtotal = price + price
+  tax = subtotal * taxrate
+  total = subtotal + tax
 
   // output
   if (total == 0) {
-    show = "no drinks";
-} else {
-  show = "$" + total.toFixed(2);
-}
-  document.getElementById("answer").innerHTML = show;
+    show = "no drinks"
+  } else {
+    show = "$" + total.toFixed(2)
+  }
+  document.getElementById("answer").innerHTML = show
 }
