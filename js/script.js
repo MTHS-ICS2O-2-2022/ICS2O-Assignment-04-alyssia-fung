@@ -4,7 +4,7 @@
  * This function uses a selection component from https://github.com/CreativeIT/getmdl-select
  */
 
-function priceOfStarbucksDrink() {
+function calculateThePriceOfTheDrink() {
   // We need to declare variables to store the price, size and tax of the selected drink
   let price
   let size = document.getElementById("select-size").value
