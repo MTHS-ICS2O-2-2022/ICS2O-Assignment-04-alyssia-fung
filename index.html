@@ -22,9 +22,9 @@
       href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Select a starbucks drink</title>
+    <title>Select a Starbucks Drink</title>
   </head>
-  <body onload="calculatethepriceofthedrink();">
+  <body onload="calculateThePriceOfTheDrink();">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
     <!-- Note the addition for the selection component-->
@@ -32,7 +32,7 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Select a starbucks drink</span>
+          <span class="mdl-layout-title">Select a Starbucks Drink</span>
         </div>
       </header>
       <main class="mdl-layout__content">
@@ -40,55 +40,61 @@
           <img
             class="right-image"
             src="./images/starbucks drink.png"
-            alt="computer"
+            alt="Starbucks Drink"
           />
         </div>
         <div class="page-content-instructions">
-          <div id="instructions">Select a starbucks drink:</div>
-        </div>
-        <!-- Simple Select with arrow -->
-        <div class="mdl-textfield mdl-js-textfield getmdl-select">
-          <input
-            type="text"
-            value=""
-            class="mdl-textfield__input"
-            id="price-of-starbucks-drink"
-            readonly
-          />
-          <input type="hidden" value="" name="price-of-starbucks-drink" />
-          <i class="mdl-icon-toggle__label material-icons"
-            >keyboard_arrow_down</i
+          <div id="instructions">Select a Starbucks Drink:</div>
+          <div id="price-of-starbucks-drink"></div>
+          <!-- Simple Select with arrow -->
+          <div class="mdl-textfield mdl-js-textfield getmdl-select">
+            <input
+              type="text"
+              value=""
+              class="mdl-textfield__input"
+              id="select-drink"
+              id="select-size"
+              readonly
+            />
+            <input type="hidden" value="" name="price-of-starbucks-drink" />
+            <i class="mdl-icon-toggle__label material-icons"
+              >keyboard_arrow_down
+            </i>
+            <label for="select-drink" class="mdl-textfield__label"
+              >Drink Selected
+            </label>
+            <ul
+              id="drink-options"
+              class="mdl-menu mdl-menu--bottom-left mdl-js-menu"
+            >
+              <li class="mdl-menu__item" data-val="one">
+                Strawberries and Creme Frappuccino Grande
+              </li>
+              <li class="mdl-menu__item" data-val="two">
+                Strawberries and Creme Frappuccino Venti
+              </li>
+              <li class="mdl-menu__item" data-val="three">
+                Pumpkin Spice Latte Grande
+              </li>
+              <li class="mdl-menu__item" data-val="four">
+                Caramel Macchiato Venti
+              </li>
+            </ul>
+          </div>
+          <br />
+          <!-- Accent-colored raised button with ripple -->
+          <button
+            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            onclick="calculateThePriceOfTheDrink()"
           >
-          <label for="sample2" class="mdl-textfield__label"
-            >Drink Selected</label
-          >
-          <ul for="sample2" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-            <li class="mdl-menu__item" data-val="one">
-              Strawberries and Creme Frappuccino Grande
-            </li>
-            <li class="mdl-menu__item" data-val="two">
-              Strawberries and Creme Frappuccino Venti
-            </li>
-            <li class="mdl-menu__item" data-val="three">
-              Pumpkin Spice Latte Grand
-            </li>
-            <li class="mdl-menu__item" data-val="four">
-              Caramel Macchiato Venti
-            </li>
-          </ul>
-        </div>
-        <br />
-        <!-- Accent-colored raised button with ripple -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()"
-        >
-          price
-        </button>
-        <br />
-        <div class="page-content-answer">
-          <div id="answer"></div>
-          <div id="calculate price"></div>
+            Price
+          </button>
+          <br />
+          <div class="page-content-answer">
+            <div id="answer"></div>
+            <div id="calculate-price"></div>
+            <div id="tax-is-13percent"></div>
+          </div>
         </div>
       </main>
     </div>

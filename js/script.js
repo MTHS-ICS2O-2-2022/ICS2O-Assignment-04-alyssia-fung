@@ -6,12 +6,12 @@
 
 function priceOfStarbucksDrink() {
   // We need to declare variables to store the price, size and tax of the selected drink
-  let price = 0
-  let size = document.getElementById("calculate price").value
-  let drink = document.getElementById("answer").value
-  let tax = 0.13 // assuming a tax rate of 13%
+  let price
+  let size = document.getElementById("select-size").value
+  let drink = document.getElementById("select-drink").value
+  const TAX = 0.13
 
-  // Calculate the price of the selected drink based on size and type
+  // Calculate the price of the selected drink based on size and tax
   switch (drink) {
     case "Strawberries & Creme Frappuccino Grande":
       price = 4.45
@@ -25,9 +25,12 @@ function priceOfStarbucksDrink() {
     case "Caramel Macchiato Venti":
       price = 4.75
       break
+    default:
+      price = 0
+      break
   }
 
-  // Add the cost of the size to the drink price
+  // Add the cost of the size to the drink and add the tax equal price
   switch (size) {
     case "Grande":
       price += 1
@@ -39,15 +42,21 @@ function priceOfStarbucksDrink() {
       break
   }
 
-  // Add tax to the price
-  price = tax + subtotal
-
-  // Output the price of the selected drink
-  document.getElementById("answer").innerHTML =
-    "The price of " + size + "tax" + drink + " is $" + price.toFixed(2)
+  let subTotal = price + price
+  const taxPaid = subTotal * TAX
+  const total = subTotal + taxPaid
 }
 
 function myButtonClicked() {
   // Call the function to calculate and output the price of the selected drink
-  document.getElementById("price - Of - Starbucks - Drink").value
+  priceOfStarbucksDrink()
 }
+
+  // output
+  document.getElementById("answer").innerHTML =
+    "The subtotal is: $" +
+    subTotal.toFixed(2) +
+    "<br />The taxPaid is: $" +
+    taxPaid.toFixed(2) +
+    "<br />The total is: $" +
+    total.toFixed(2)
