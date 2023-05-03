@@ -42,16 +42,15 @@ function calculateThePriceOfTheDrink() {
       break
   }
 
-  let subTotal = price + price
-  const taxPaid = subTotal * TAX
-  const total = subTotal + taxPaid
-}
+  // prossces
+  let totalPrice = 0
+  if (selectDink in price) {
+    const subTotal = price + price
+    taxPaid = subTotal * tax
+    total = subTotal + taxPaid
+  }
 
-// output
-document.getElementById("answer").innerHTML =
-  "The subtotal is: $" +
-  subTotal.toFixed(2) +
-  "<br />The taxPaid is: $" +
-  taxPaid.toFixed(2) +
-  "<br />The total is: $" +
-  total.toFixed(2)
+  alert("totalPrice")
+  // output
+  document.getElementById("answer").innerHTML
+}
