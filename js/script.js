@@ -47,16 +47,11 @@ function priceOfStarbucksDrink() {
   const total = subTotal + taxPaid
 }
 
-function myButtonClicked() {
-  // Call the function to calculate and output the price of the selected drink
-  priceOfStarbucksDrink()
-}
-
-  // output
-  document.getElementById("answer").innerHTML =
-    "The subtotal is: $" +
-    subTotal.toFixed(2) +
-    "<br />The taxPaid is: $" +
-    taxPaid.toFixed(2) +
-    "<br />The total is: $" +
-    total.toFixed(2)
+// output
+document.getElementById("answer").innerHTML =
+  "The subtotal is: $" +
+  subTotal.toFixed(2) +
+  "<br />The taxPaid is: $" +
+  taxPaid.toFixed(2) +
+  "<br />The total is: $" +
+  total.toFixed(2)
