@@ -10,6 +10,7 @@ function calculateThePriceOfTheDrink() {
   let subtotal
   let tax
   let total
+  let show
   let drink = document.getElementById("select-drink").value
   const taxrate = 0.13
 
