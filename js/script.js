@@ -7,9 +7,11 @@
 function calculateThePriceOfTheDrink() {
   // We need to declare variables to store the price, size and tax of the selected drink
   let price
+  let subtotal
+  let tax
+  let total
   let drink = document.getElementById("select-drink").value
   const taxrate = 0.13
-alert(drink);
 
   // Calculate the price of the selected drink based on size and tax
   switch (drink) {
@@ -29,15 +31,17 @@ alert(drink);
       price = 0
       break
   }
-  alert(price);
 
   // prossces
-tax = (price + price) * taxrate
 subtotal = price + price
 tax = subtotal * taxrate
 total = subtotal + tax
 
-alert("abc");
   // output
-  document.getElementById("answer").innerHTML = "abc"
+  if (total == 0) {
+    show = "no drinks";
+} else {
+  show = "$" + total.toFixed(2);
+}
+  document.getElementById("answer").innerHTML = show;
 }
