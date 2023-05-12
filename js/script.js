@@ -12,9 +12,12 @@ function calculateThePriceOfTheDrink() {
   let total
   let show
   let drink = document.getElementById("select-drink").value
-  const taxrate = 0.13
+  const TAXRATE = 0.13
 
   // Calculate the price of the selected drink based on size and tax
+
+  // The use of Switch/case statement
+  // https://www.w3schools.com/js/js_switch.asp#gsc.tab=0
   switch (drink) {
     case "Strawberries and Creme Frappuccino Grande":
       price = 4.45
@@ -35,7 +38,7 @@ function calculateThePriceOfTheDrink() {
 
   // prossces
   subtotal = price + price
-  tax = subtotal * taxrate
+  tax = subtotal * TAXRATE
   total = subtotal + tax
 
   // output
